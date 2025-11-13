@@ -1,0 +1,46 @@
+Build a one-page React + TailwindCSS website for a Nigerian luxury fashion designer.  
+The site should have a *classy, minimalist, and modern* design — think black, white, gold accents, elegant serif headings, and smooth animations.
+
+Include the following sections:
+
+1. **Hero Section**
+   - Full-screen background image with overlay text like “Elegance in Every Stitch.”
+   - Include the designer’s name or logo.
+   - Add a “View Collection” button that scrolls to the gallery.
+
+2. **About Section**
+   - Short paragraph about the designer’s story and fashion philosophy.
+   - Use centered text, elegant spacing, and subtle fade-in animation.
+
+3. **Gallery Section**
+   - Display 6–8 outfit images in a clean responsive grid.
+   - Each outfit card should have:
+     - A photo
+     - A name/title
+     - A short description
+     - A **“Order Now”** button that opens WhatsApp with a pre-filled message.
+       Example link: `https://wa.me/234XXXXXXXXXX?text=Hi!%20I'm%20interested%20in%20the%20[Outfit%20Name].`
+   - Add hover effects (zoom-in and shadow) and smooth transitions.
+
+4. **Testimonials Section**
+   - 2–3 short client reviews with gold star icons.
+   - Simple fade or slide animations as they scroll into view.
+
+5. **Contact Section**
+   - Include WhatsApp, Instagram, and phone number icons with hover glow effects.
+   - Maybe a small thank-you message like “Let’s create something beautiful together.”
+
+6. **Footer**
+   - Black background, gold text.
+   - Centered copyright and designer’s name.
+
+**Design requirements:**
+- Use Tailwind CSS for styling and responsiveness.
+- Use Framer Motion for smooth entrance animations.
+- Font pairing: elegant serif for headings, modern sans-serif for body text.
+- Color palette: Black (#000000), White (#FFFFFF), Gold (#D4AF37).
+- Layout must look elegant and professional on both desktop and mobile.
+- Add a fixed navbar with smooth scroll to each section.
+- Keep the code clean, classy, and ready to deploy on Replit or Vercel.
+
+Make it feel like a luxury fashion brand — minimalist but not boring.
