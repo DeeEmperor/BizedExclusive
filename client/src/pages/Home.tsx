@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import Founder from "@/components/Founder";
 import Gallery from "@/components/Gallery";
 import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
@@ -19,6 +20,7 @@ export default function Home() {
       <Navigation onNavigate={scrollToSection} />
       <Hero onViewCollection={() => scrollToSection("gallery")} />
       <About />
+      <Founder />
       <Gallery />
       <Testimonials />
       <Contact />

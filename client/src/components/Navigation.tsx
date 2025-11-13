@@ -23,6 +23,7 @@ export default function Navigation({ onNavigate }: NavigationProps) {
   const navLinks = [
     { label: "Home", href: "hero" },
     { label: "About", href: "about" },
+    { label: "Founder", href: "founder" },
     { label: "Collection", href: "gallery" },
     { label: "Testimonials", href: "testimonials" },
     { label: "Contact", href: "contact" },
