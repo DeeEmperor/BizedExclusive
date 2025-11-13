@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import founderImage from "@assets/generated_images/Male_founder_portrait_elegant_1c7ff91b.png";
+const founderImage = "/assets/bized.jpg";
 
 export default function Founder() {
   const ref = useRef(null);
@@ -33,7 +33,7 @@ export default function Founder() {
             <div className="space-y-6 text-foreground/80 leading-relaxed">
               <p className="text-lg">
                 <span className="font-serif text-2xl text-primary font-semibold block mb-2">
-                  Oluwaseun Adeyemi
+                  Ishola Ayodeji Ayomide.
                 </span>
                 <span className="text-muted-foreground text-base italic">
                   Creative Director & Founder
@@ -41,7 +41,7 @@ export default function Founder() {
               </p>
 
               <p className="text-base md:text-lg">
-                With over 15 years of experience in haute couture menswear, Oluwaseun Adeyemi
+                With over 15 years of experience in haute couture menswear, Bized
                 has become one of Nigeria's most celebrated men's fashion designers.
                 His journey began in Lagos, where he discovered his passion for
                 blending traditional African aesthetics with contemporary luxury
@@ -63,7 +63,7 @@ export default function Founder() {
               </p>
 
               <p className="text-base md:text-lg font-serif text-primary italic">
-                "Fashion is not just about what you wear—it's about how you feel,
+                "Fashion is not just about what you wear, it's about how you feel,
                 the stories you tell, and the legacy you create."
               </p>
             </div>
@@ -79,7 +79,7 @@ export default function Founder() {
               <div className="aspect-[3/4] overflow-hidden rounded-md">
                 <img
                   src={founderImage}
-                  alt="Oluwaseun Adeyemi, Founder of BizedExclusive"
+                  alt="Ishola Ayodeji Ayomide, Founder of BizedExclusive"
                   className="w-full h-full object-cover"
                   data-testid="img-founder"
                 />

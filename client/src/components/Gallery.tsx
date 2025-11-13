@@ -25,7 +25,7 @@ function OutfitCard({ image, name, description, index }: OutfitCardProps) {
 
   const handleOrder = () => {
     const message = encodeURIComponent(`Hi! I'm interested in the ${name}.`);
-    const whatsappNumber = "2348000000000";
+    const whatsappNumber = "23480600043087";
     window.open(`https://wa.me/${whatsappNumber}?text=${message}`, "_blank");
   };
 

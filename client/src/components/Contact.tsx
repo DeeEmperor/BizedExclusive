@@ -42,7 +42,7 @@ export default function Contact() {
     {
       icon: <MessageCircle className="w-8 h-8" />,
       label: "WhatsApp",
-      href: "https://wa.me/2348000000000",
+      href: "https://wa.me/23480600043087",
     },
     {
       icon: <Instagram className="w-8 h-8" />,
@@ -52,7 +52,7 @@ export default function Contact() {
     {
       icon: <Phone className="w-8 h-8" />,
       label: "Call Us",
-      href: "tel:+2348000000000",
+      href: "tel:+23480600043087",
     },
   ];
 
