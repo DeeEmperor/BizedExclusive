@@ -24,19 +24,19 @@ export default function About() {
 
         <div className="space-y-6 text-foreground/80 leading-relaxed">
           <p className="text-lg md:text-xl">
-            At BizedExclusive, we believe that fashion is more than clothing—it
+            At BizedExclusive, we believe that menswear is more than clothing—it
             is an art form, a statement of identity, and a celebration of
             heritage. Each piece in our collection is meticulously crafted to
             embody the perfect fusion of traditional Nigerian elegance and
-            contemporary luxury.
+            contemporary luxury tailoring.
           </p>
 
           <p className="text-lg md:text-xl">
-            Our designer brings over a decade of experience in haute couture,
+            Our designer brings over a decade of experience in haute couture menswear,
             drawing inspiration from the rich cultural tapestry of Nigeria while
-            embracing modern design principles. Every stitch tells a story,
+            embracing modern tailoring principles. Every stitch tells a story,
             every fabric choice reflects excellence, and every creation is a
-            testament to our commitment to unparalleled quality.
+            testament to our commitment to unparalleled quality for the discerning gentleman.
           </p>
 
           <p className="text-lg md:text-xl font-serif text-primary italic">

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import founderImage from "@assets/generated_images/Founder_professional_portrait_elegant_948eace6.png";
+import founderImage from "@assets/generated_images/Male_founder_portrait_elegant_1c7ff91b.png";
 
 export default function Founder() {
   const ref = useRef(null);
@@ -33,7 +33,7 @@ export default function Founder() {
             <div className="space-y-6 text-foreground/80 leading-relaxed">
               <p className="text-lg">
                 <span className="font-serif text-2xl text-primary font-semibold block mb-2">
-                  Bisi Adeyemi
+                  Oluwaseun Adeyemi
                 </span>
                 <span className="text-muted-foreground text-base italic">
                   Creative Director & Founder
@@ -41,25 +41,25 @@ export default function Founder() {
               </p>
 
               <p className="text-base md:text-lg">
-                With over 15 years of experience in haute couture, Bisi Adeyemi
-                has become one of Nigeria's most celebrated fashion designers.
-                Her journey began in Lagos, where she discovered her passion for
+                With over 15 years of experience in haute couture menswear, Oluwaseun Adeyemi
+                has become one of Nigeria's most celebrated men's fashion designers.
+                His journey began in Lagos, where he discovered his passion for
                 blending traditional African aesthetics with contemporary luxury
-                design.
+                tailoring.
               </p>
 
               <p className="text-base md:text-lg">
-                Trained at the prestigious Parsons School of Design in New York
-                and having worked with renowned fashion houses in Paris and
-                Milan, Bisi returned to Nigeria with a vision: to create a
-                luxury brand that celebrates African heritage while setting new
-                standards in global fashion.
+                Trained at the prestigious Savile Row in London and having worked 
+                with renowned menswear houses in Milan and New York, Oluwaseun 
+                returned to Nigeria with a vision: to create a luxury menswear 
+                brand that celebrates African heritage while setting new standards 
+                in global men's fashion.
               </p>
 
               <p className="text-base md:text-lg">
-                Every piece from BizedExclusive bears her signature touch—meticulous
+                Every piece from BizedExclusive bears his signature touch—meticulous
                 attention to detail, innovative use of premium fabrics, and an
-                unwavering commitment to making every client feel extraordinary.
+                unwavering commitment to making every client look and feel extraordinary.
               </p>
 
               <p className="text-base md:text-lg font-serif text-primary italic">
@@ -79,7 +79,7 @@ export default function Founder() {
               <div className="aspect-[3/4] overflow-hidden rounded-md">
                 <img
                   src={founderImage}
-                  alt="Bisi Adeyemi, Founder of BizedExclusive"
+                  alt="Oluwaseun Adeyemi, Founder of BizedExclusive"
                   className="w-full h-full object-cover"
                   data-testid="img-founder"
                 />

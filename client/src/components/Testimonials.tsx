@@ -61,17 +61,17 @@ export default function Testimonials() {
     {
       quote:
         "BizedExclusive transformed my vision into reality. The attention to detail and craftsmanship is unmatched. I felt like royalty at my wedding!",
-      author: "Amara O.",
+      author: "Chukwudi O.",
     },
     {
       quote:
-        "The perfect blend of Nigerian heritage and modern luxury. Every piece tells a story and the quality speaks for itself. Absolutely exceptional.",
-      author: "Chioma N.",
+        "The perfect blend of Nigerian heritage and modern luxury tailoring. Every piece tells a story and the quality speaks for itself. Absolutely exceptional.",
+      author: "Adebayo N.",
     },
     {
       quote:
-        "I've never received so many compliments on an outfit. The elegance, the fit, the artistry—BizedExclusive is truly in a class of its own.",
-      author: "Funmi A.",
+        "I've never received so many compliments on a suit. The fit, the craftsmanship, the attention to detail—BizedExclusive is truly in a class of its own.",
+      author: "Emeka A.",
     },
   ];
 

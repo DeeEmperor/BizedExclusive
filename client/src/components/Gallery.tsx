@@ -3,14 +3,14 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import whiteGown from "@assets/generated_images/White_evening_gown_gold_57609cde.png";
-import blackDress from "@assets/generated_images/Black_cocktail_dress_elegant_d2eeafd6.png";
-import goldFormal from "@assets/generated_images/Gold_traditional_formal_wear_e13f60b1.png";
-import emeraldGown from "@assets/generated_images/Emerald_gown_gold_details_bfc3e987.png";
-import burgundyDress from "@assets/generated_images/Burgundy_formal_dress_luxury_0b4c53a5.png";
-import creamEnsemble from "@assets/generated_images/Cream_gold_ensemble_elegant_0dc4cf37.png";
-import navyGown from "@assets/generated_images/Navy_gown_gold_embroidery_66ff0111.png";
-import blushGown from "@assets/generated_images/Blush_pink_gown_elegant_6d7fe32c.png";
+import whiteSuit from "@assets/generated_images/White_suit_gold_menswear_40151043.png";
+import blackTuxedo from "@assets/generated_images/Black_tuxedo_elegant_menswear_6c2a3cf7.png";
+import goldAgbada from "@assets/generated_images/Gold_traditional_menswear_formal_aa3c7731.png";
+import emeraldBlazer from "@assets/generated_images/Emerald_blazer_gold_menswear_00c4e7ff.png";
+import burgundySuit from "@assets/generated_images/Burgundy_suit_luxury_menswear_4b96f2f9.png";
+import creamSafari from "@assets/generated_images/Cream_gold_safari_menswear_3f73dd7b.png";
+import navySuit from "@assets/generated_images/Navy_suit_gold_embroidery_e3ca2c01.png";
+import charcoalSuit from "@assets/generated_images/Charcoal_suit_elegant_menswear_1527ec1a.png";
 
 interface OutfitCardProps {
   image: string;
@@ -73,52 +73,52 @@ function OutfitCard({ image, name, description, index }: OutfitCardProps) {
 export default function Gallery() {
   const outfits = [
     {
-      image: whiteGown,
-      name: "Ivory Elegance",
+      image: whiteSuit,
+      name: "Ivory Prestige",
       description:
-        "A breathtaking white evening gown with delicate gold accents, perfect for grand occasions.",
+        "Impeccably tailored white suit with subtle gold accents, perfect for grand occasions and celebrations.",
     },
     {
-      image: blackDress,
-      name: "Midnight Grace",
+      image: blackTuxedo,
+      name: "Midnight Sophistication",
       description:
-        "Sophisticated black cocktail dress featuring subtle gold threading for timeless appeal.",
+        "Classic black tuxedo with gold bow tie and pocket square, embodying timeless masculine elegance.",
     },
     {
-      image: goldFormal,
+      image: goldAgbada,
       name: "Golden Heritage",
       description:
-        "Traditional Nigerian-inspired formal attire reimagined with modern luxury and intricate detailing.",
+        "Traditional Nigerian agbada reimagined with modern luxury tailoring and intricate gold detailing.",
     },
     {
-      image: emeraldGown,
-      name: "Emerald Majesty",
+      image: emeraldBlazer,
+      name: "Emerald Distinction",
       description:
-        "Stunning emerald green evening gown adorned with gold embellishments for regal presence.",
+        "Luxurious emerald green velvet blazer with gold buttons for refined presence and style.",
     },
     {
-      image: burgundyDress,
+      image: burgundySuit,
       name: "Burgundy Royale",
       description:
-        "Luxurious burgundy formal dress with gold accents, embodying sophistication and elegance.",
+        "Three-piece burgundy suit with gold accessories, perfect for the distinguished gentleman.",
     },
     {
-      image: creamEnsemble,
-      name: "Cream Couture",
+      image: creamSafari,
+      name: "Safari Excellence",
       description:
-        "Elegant two-piece ensemble in cream and gold, showcasing premium tailoring and design.",
+        "Modern safari suit in cream and gold, blending classic design with contemporary sophistication.",
     },
     {
-      image: navyGown,
-      name: "Navy Opulence",
+      image: navySuit,
+      name: "Navy Authority",
       description:
-        "Timeless navy blue evening gown featuring exquisite gold embroidery and refined silhouette.",
+        "Timeless navy blue suit featuring exquisite gold embroidery on lapels and refined tailoring.",
     },
     {
-      image: blushGown,
-      name: "Blush Romance",
+      image: charcoalSuit,
+      name: "Charcoal Distinction",
       description:
-        "Delicate blush pink gown with gold accents, perfect for making a graceful statement.",
+        "Sophisticated charcoal grey suit with gold pinstripes, the epitome of modern elegance.",
     },
   ];
 
@@ -139,8 +139,8 @@ export default function Gallery() {
             Our Collection
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Discover our exclusive range of handcrafted luxury pieces, each
-            designed to make you feel extraordinary
+            Discover our exclusive range of handcrafted luxury menswear, each
+            piece tailored to make you look and feel extraordinary
           </p>
         </motion.div>
 

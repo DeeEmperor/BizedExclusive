@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import heroImage from "@assets/generated_images/Hero_background_luxury_fashion_bc82c7f7.png";
+import heroImage from "@assets/generated_images/Hero_menswear_luxury_fashion_d1d20a5f.png";
 
 interface HeroProps {
   onViewCollection: () => void;
@@ -32,7 +32,7 @@ export default function Hero({ onViewCollection }: HeroProps) {
             Elegance in Every Stitch
           </p>
           <p className="text-white/90 text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
-            Luxury Nigerian fashion crafted with precision, passion, and
+            Luxury Nigerian menswear crafted with precision, passion, and
             cultural excellence
           </p>
 
