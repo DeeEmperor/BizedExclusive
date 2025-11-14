@@ -50,14 +50,14 @@ export default function Founder() {
 
               <p className="text-base md:text-lg">
                 Trained at the prestigious Savile Row in London and having worked 
-                with renowned menswear houses in Milan and New York, Oluwaseun 
+                with renowned menswear houses in Milan and New York, Bized
                 returned to Nigeria with a vision: to create a luxury menswear 
                 brand that celebrates African heritage while setting new standards 
                 in global men's fashion.
               </p>
 
               <p className="text-base md:text-lg">
-                Every piece from BizedExclusive bears his signature touch—meticulous
+                Every piece from BizedExclusive bears his signature touch, meticulous
                 attention to detail, innovative use of premium fabrics, and an
                 unwavering commitment to making every client look and feel extraordinary.
               </p>
