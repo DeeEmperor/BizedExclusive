@@ -3,14 +3,24 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import whiteSuit from "@assets/generated_images/White_suit_gold_menswear_40151043.png";
-import blackTuxedo from "@assets/generated_images/Black_tuxedo_elegant_menswear_6c2a3cf7.png";
-import goldAgbada from "@assets/generated_images/Gold_traditional_menswear_formal_aa3c7731.png";
-import emeraldBlazer from "@assets/generated_images/Emerald_blazer_gold_menswear_00c4e7ff.png";
-import burgundySuit from "@assets/generated_images/Burgundy_suit_luxury_menswear_4b96f2f9.png";
-import creamSafari from "@assets/generated_images/Cream_gold_safari_menswear_3f73dd7b.png";
-import navySuit from "@assets/generated_images/Navy_suit_gold_embroidery_e3ca2c01.png";
-import charcoalSuit from "@assets/generated_images/Charcoal_suit_elegant_menswear_1527ec1a.png";
+const img1 = "/assets/IMG_0045.jpg";
+const img2 = "/assets/IMG_0050.jpg";
+const img3 = "/assets/IMG_1182.jpg";
+const img4 = "/assets/IMG_1191.jpg";
+const img5 = "/assets/IMG_2331.jpg";
+const img6 = "/assets/IMG_2332.jpg";
+const img7 = "/assets/IMG_3257.jpg";
+const img8 = "/assets/IMG_4117.jpg";
+const img9 = "/assets/IMG_4119.jpg";
+const img10 = "/assets/IMG_4457.jpg";
+const img11 = "/assets/IMG_1023.JPEG";
+const img12 = "/assets/IMG_1257.JPG";
+const img13 = "/assets/IMG_1557.JPG";
+const img14 = "/assets/IMG_1559.JPG";
+const img15 = "/assets/IMG_1979.JPG";
+const img16 = "/assets/IMG_1982.JPG";
+const img17 = "/assets/IMG_4655.JPG";
+const img18 = "/assets/IMG_4656.JPG";
 
 interface OutfitCardProps {
   image: string;
@@ -73,52 +83,94 @@ function OutfitCard({ image, name, description, index }: OutfitCardProps) {
 export default function Gallery() {
   const outfits = [
     {
-      image: whiteSuit,
-      name: "Ivory Prestige",
-      description:
-        "Impeccably tailored white suit with subtle gold accents, perfect for grand occasions and celebrations.",
+      image: img1,
+      name: "Elegant vintage shirt",
+      description: "A well tailored vintage shirt that exudes sophistication and style.",
     },
     {
-      image: blackTuxedo,
-      name: "Midnight Sophistication",
-      description:
-        "Classic black tuxedo with gold bow tie and pocket square, embodying timeless masculine elegance.",
+      image: img2,
+      name: "Classic Formal Attire",
+      description: "Timeless formal wear that combines traditional elegance with contemporary style for the modern gentleman.",
     },
     {
-      image: goldAgbada,
-      name: "Golden Heritage",
-      description:
-        "Traditional Nigerian agbada reimagined with modern luxury tailoring and intricate gold detailing.",
+      image: img3,
+      name: "Business Professional",
+      description: "Sharp business attire designed for the professional who values both style and comfort in the workplace.",
     },
     {
-      image: emeraldBlazer,
-      name: "Emerald Distinction",
-      description:
-        "Luxurious emerald green velvet blazer with gold buttons for refined presence and style.",
+      image: img4,
+      name: "Distinguished Look",
+      description: "A distinguished ensemble that makes a powerful statement at any formal gathering or business meeting.",
     },
     {
-      image: burgundySuit,
-      name: "Burgundy Royale",
-      description:
-        "Three-piece burgundy suit with gold accessories, perfect for the distinguished gentleman.",
+      image: img5,
+      name: "Contemporary Formal",
+      description: "Modern take on formal wear with clean lines and impeccable tailoring for a polished appearance.",
     },
     {
-      image: creamSafari,
-      name: "Safari Excellence",
-      description:
-        "Modern safari suit in cream and gold, blending classic design with contemporary sophistication.",
+      image: img6,
+      name: "Refined Business Suit",
+      description: "Elegant business suit that exudes confidence and professionalism in any corporate setting.",
     },
     {
-      image: navySuit,
-      name: "Navy Authority",
-      description:
-        "Timeless navy blue suit featuring exquisite gold embroidery on lapels and refined tailoring.",
+      image: img7,
+      name: "Executive Collection",
+      description: "Premium executive wear designed for leaders who command attention with their impeccable style.",
     },
     {
-      image: charcoalSuit,
-      name: "Charcoal Distinction",
-      description:
-        "Sophisticated charcoal grey suit with gold pinstripes, the epitome of modern elegance.",
+      image: img8,
+      name: "Modern Gentleman",
+      description: "Contemporary formal wear that blends modern trends with classic tailoring techniques.",
+    },
+    {
+      image: img9,
+      name: "Stylish Professional",
+      description: "A perfect blend of style and professionalism for the modern working professional.",
+    },
+    {
+      image: img10,
+      name: "Classic Business Attire",
+      description: "Traditional business wear that never goes out of style, perfect for making a lasting impression.",
+    },
+    {
+      image: img11,
+      name: "Luxury Formal Wear",
+      description: "High-end formal wear that showcases exceptional craftsmanship and attention to detail.",
+    },
+    {
+      image: img12,
+      name: "Professional Style",
+      description: "Sharp and professional look that's perfect for making an impact in any business environment.",
+    },
+    {
+      image: img13,
+      name: "Executive Presence",
+      description: "Command attention with this executive look that blends authority with modern style.",
+    },
+    {
+      image: img14,
+      name: "Modern Business Classic",
+      description: "A contemporary take on classic business attire for the style-conscious professional.",
+    },
+    {
+      image: img15,
+      name: "Distinguished Professional",
+      description: "A look that combines professionalism with distinctive personal style.",
+    },
+    {
+      image: img16,
+      name: "Refined Executive",
+      description: "Exemplary executive style that speaks volumes about your attention to detail.",
+    },
+    {
+      image: img17,
+      name: "Classic Sophistication",
+      description: "Timeless elegance that never goes out of style, perfect for any formal occasion.",
+    },
+    {
+      image: img18,
+      name: "Professional Elegance",
+      description: "A perfect balance of professional polish and sophisticated style.",
     },
   ];
 

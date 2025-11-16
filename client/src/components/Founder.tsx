@@ -33,7 +33,7 @@ export default function Founder() {
             <div className="space-y-6 text-foreground/80 leading-relaxed">
               <p className="text-lg">
                 <span className="font-serif text-2xl text-primary font-semibold block mb-2">
-                  Ishola Ayodeji Ayomide.
+                  Deji Manuels.
                 </span>
                 <span className="text-muted-foreground text-base italic">
                   Creative Director & Founder
@@ -79,7 +79,7 @@ export default function Founder() {
               <div className="aspect-[3/4] overflow-hidden rounded-md">
                 <img
                   src={founderImage}
-                  alt="Ishola Ayodeji Ayomide, Founder of BizedExclusive"
+                  alt="Deji Manuels, Founder of BizedExclusive"
                   className="w-full h-full object-cover"
                   data-testid="img-founder"
                 />
