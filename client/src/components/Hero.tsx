@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import heroImage from "@assets/generated_images/Hero_menswear_luxury_fashion_d1d20a5f.png";
+const heroImage ="/assets/IMG_6264.JPG"; 
 
 interface HeroProps {
   onViewCollection: () => void;

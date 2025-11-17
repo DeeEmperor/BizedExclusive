@@ -89,58 +89,50 @@ export default function Gallery() {
     },
     {
       image: img2,
-      name: "Classic Formal Attire",
-      description: "Timeless formal wear that combines traditional elegance with contemporary style for the modern gentleman.",
+      name: "Classic  Attire",
+      description: "A classic style for the modern and classy gentleman.",
     },
     {
       image: img3,
-      name: "Business Professional",
-      description: "Sharp business attire designed for the professional who values both style and comfort in the workplace.",
+      name: "Embroidered Two Piece",
+      description: "Sharp business and embroidered attire designed for the gentle man who values both style and comfort at any location.",
     },
     {
       image: img4,
-      name: "Distinguished Look",
-      description: "A distinguished ensemble that makes a powerful statement at any formal gathering or business meeting.",
+      name: "Distinguished Agbada",
+      description: "A distinguished ensemble that makes a powerful statement at any traditional gathering.",
     },
     {
       image: img5,
-      name: "Contemporary Formal",
-      description: "Modern take on formal wear with clean lines and impeccable tailoring for a polished appearance.",
+      name: "2 Colored Fìlà Gọ̀bì ",
+      description: "Your stylish and captivating trad cap for the outstanding gentleman",
     },
-    {
-      image: img6,
-      name: "Refined Business Suit",
-      description: "Elegant business suit that exudes confidence and professionalism in any corporate setting.",
-    },
+    
     {
       image: img7,
       name: "Executive Collection",
       description: "Premium executive wear designed for leaders who command attention with their impeccable style.",
     },
-    {
-      image: img8,
-      name: "Modern Gentleman",
-      description: "Contemporary formal wear that blends modern trends with classic tailoring techniques.",
-    },
+    
     {
       image: img9,
-      name: "Stylish Professional",
-      description: "A perfect blend of style and professionalism for the modern working professional.",
+      name: "Stylish Embroidery",
+      description: "A perfect blend of style and professionalism with embroidered attire.",
     },
     {
       image: img10,
       name: "Classic Business Attire",
-      description: "Traditional business wear that never goes out of style, perfect for making a lasting impression.",
+      description: "Classy business wear that never goes out of style, perfect for making a lasting impression.",
     },
     {
       image: img11,
-      name: "Luxury Formal Wear",
-      description: "High-end formal wear that showcases exceptional craftsmanship and attention to detail.",
+      name: "Multi-colored Fìlà ",
+      description: "High-end cap that showcases exceptional craftsmanship and attention to detail.",
     },
     {
       image: img12,
-      name: "Professional Style",
-      description: "Sharp and professional look that's perfect for making an impact in any business environment.",
+      name: "Casual Attire",
+      description: "Sharp and casual look that steals the show at any outdoor event",
     },
     {
       image: img13,
