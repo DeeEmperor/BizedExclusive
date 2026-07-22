@@ -3,7 +3,7 @@ import multer from "multer";
 import path from "path";
 import fs from "fs";
 import { storage } from "./storage";
-import type { InsertOutfit } from "@shared/schema";
+import type { InsertOutfit } from "../shared/schema";
 
 const adminRouter = Router();
 
@@ -48,10 +48,15 @@ adminRouter.get("/me", (req: Request, res: Response) => {
 });
 
 // ── File upload configuration (multer) ───────────────────────────────────────
-const uploadDir = path.resolve(process.cwd(), "client", "public", "assets");
+// Vercel's filesystem is read-only in production except /tmp.
+// Locally we write to client/public/assets so the dev server can serve them.
+const isVercel = !!process.env.VERCEL;
+const uploadDir = isVercel
+  ? "/tmp"
+  : path.resolve(process.cwd(), "client", "public", "assets");
 
-// Ensure the upload directory exists
-if (!fs.existsSync(uploadDir)) {
+// Ensure the upload directory exists (only matters locally)
+if (!isVercel && !fs.existsSync(uploadDir)) {
   fs.mkdirSync(uploadDir, { recursive: true });
 }
 
