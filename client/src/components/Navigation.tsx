@@ -2,14 +2,16 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLocation } from "wouter";
 
 interface NavigationProps {
-  onNavigate: (section: string) => void;
+  onNavigate?: (section: string) => void;
 }
 
 export default function Navigation({ onNavigate }: NavigationProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [, setLocation] = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,7 +32,19 @@ export default function Navigation({ onNavigate }: NavigationProps) {
   ];
 
   const handleNavClick = (href: string) => {
-    onNavigate(href);
+    if (onNavigate) {
+      onNavigate(href);
+    } else {
+      // If we are not on the home page, navigate to home and append hash
+      // A small delay could be added if smooth scrolling is desired, but wouter handles basic routing.
+      setLocation("/");
+      setTimeout(() => {
+        const element = document.getElementById(href);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    }
     setIsMobileMenuOpen(false);
   };
 
