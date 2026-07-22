@@ -9,6 +9,7 @@ import { lazy, Suspense } from "react";
 // Code-splitting routes
 const Home = lazy(() => import("@/pages/Home"));
 const Product = lazy(() => import("@/pages/Product"));
+const Admin = lazy(() => import("@/pages/Admin"));
 const NotFound = lazy(() => import("@/pages/not-found"));
 
 function Router() {
@@ -17,6 +18,7 @@ function Router() {
       <Switch>
         <Route path="/" component={Home} />
         <Route path="/product/:slug" component={Product} />
+        <Route path="/admin" component={Admin} />
         <Route component={NotFound} />
       </Switch>
     </Suspense>

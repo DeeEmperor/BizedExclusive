@@ -4,12 +4,18 @@ import { randomUUID } from "crypto";
 // modify the interface with any CRUD methods
 // you might need
 
+export type UpdateOutfit = Partial<InsertOutfit>;
+
 export interface IStorage {
   getUser(id: string): Promise<User | undefined>;
   getUserByUsername(username: string): Promise<User | undefined>;
   createUser(user: InsertUser): Promise<User>;
   getOutfits(): Promise<Outfit[]>;
   getOutfitBySlug(slug: string): Promise<Outfit | undefined>;
+  getOutfitById(id: string): Promise<Outfit | undefined>;
+  createOutfit(outfit: InsertOutfit): Promise<Outfit>;
+  updateOutfit(id: string, data: UpdateOutfit): Promise<Outfit | undefined>;
+  deleteOutfit(id: string): Promise<boolean>;
 }
 
 export class MemStorage implements IStorage {
@@ -73,6 +79,37 @@ export class MemStorage implements IStorage {
     return Array.from(this.outfits.values()).find(
       (outfit) => outfit.slug === slug
     );
+  }
+
+  async getOutfitById(id: string): Promise<Outfit | undefined> {
+    return this.outfits.get(id);
+  }
+
+  async createOutfit(insertOutfit: InsertOutfit): Promise<Outfit> {
+    const id = randomUUID();
+    const outfit: Outfit = {
+      id,
+      name: insertOutfit.name,
+      slug: insertOutfit.slug,
+      description: insertOutfit.description,
+      image: insertOutfit.image,
+      price: insertOutfit.price ?? null,
+      currency: insertOutfit.currency ?? null,
+    };
+    this.outfits.set(id, outfit);
+    return outfit;
+  }
+
+  async updateOutfit(id: string, data: UpdateOutfit): Promise<Outfit | undefined> {
+    const existing = this.outfits.get(id);
+    if (!existing) return undefined;
+    const updated: Outfit = { ...existing, ...data };
+    this.outfits.set(id, updated);
+    return updated;
+  }
+
+  async deleteOutfit(id: string): Promise<boolean> {
+    return this.outfits.delete(id);
   }
 }
 
