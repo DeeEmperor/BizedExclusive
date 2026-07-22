@@ -1,7 +1,9 @@
 {
+  "framework": null,
   "buildCommand": "npm run build",
   "outputDirectory": "dist/public",
   "rewrites": [
+    { "source": "/api/health", "destination": "/api/index" },
     { "source": "/sitemap.xml", "destination": "/api/index" },
     { "source": "/api/:path*", "destination": "/api/index" }
   ]

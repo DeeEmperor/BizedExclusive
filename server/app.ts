@@ -28,16 +28,46 @@ app.use(session({
   },
 }));
 
-// ── Request logging ───────────────────────────────────────────────────────────
+// ── Request logger ───────────────────────────────────────────────────────────
+const colours = {
+  reset: "\x1b[0m",
+  green: "\x1b[32m",
+  yellow: "\x1b[33m",
+  red: "\x1b[31m",
+  cyan: "\x1b[36m",
+  grey: "\x1b[90m",
+};
+
+function statusColour(code: number) {
+  if (code < 300) return colours.green;
+  if (code < 400) return colours.yellow;
+  return colours.red;
+}
+
 app.use((req, res, next) => {
   const start = Date.now();
-  const path = req.path;
+  const ts = new Date().toISOString();
   res.on("finish", () => {
-    if (path.startsWith("/api") || path === "/sitemap.xml") {
-      console.log(`${req.method} ${path} ${res.statusCode} in ${Date.now() - start}ms`);
-    }
+    const ms = Date.now() - start;
+    const sc = statusColour(res.statusCode);
+    console.log(
+      `${colours.grey}[${ts}]${colours.reset} ` +
+      `${colours.cyan}${req.method}${colours.reset} ` +
+      `${req.path} ` +
+      `${sc}${res.statusCode}${colours.reset} ` +
+      `${colours.grey}${ms}ms${colours.reset}`
+    );
   });
   next();
+});
+
+// ── Health check ──────────────────────────────────────────────────────────────
+app.get("/api/health", (_req, res) => {
+  res.json({
+    status: "ok",
+    env: process.env.NODE_ENV || "development",
+    timestamp: new Date().toISOString(),
+  });
 });
 
 // ── Sitemap.xml ───────────────────────────────────────────────────────────────
