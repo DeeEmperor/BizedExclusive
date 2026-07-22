@@ -1,41 +1,17 @@
-import { useQuery } from "@tanstack/react-query";
 import { useRoute } from "wouter";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Skeleton } from "@/components/ui/skeleton";
-import type { Outfit } from "@shared/schema";
+import { OUTFITS } from "@/data/outfits";
 
 export default function Product() {
   const [, params] = useRoute("/product/:slug");
   const slug = params?.slug;
 
-  const { data: outfit, isLoading, error } = useQuery<Outfit>({
-    queryKey: ["outfit", slug],
-    queryFn: async () => {
-      const response = await fetch(`/api/outfits/${slug}`);
-      if (!response.ok) {
-        throw new Error("Outfit not found");
-      }
-      return response.json();
-    },
-    enabled: !!slug,
-  });
+  const outfit = OUTFITS.find((o) => o.slug === slug);
 
-  if (isLoading) {
-    return (
-      <div className="min-h-screen flex flex-col">
-        <Navigation />
-        <main className="flex-grow flex items-center justify-center p-6">
-          <Skeleton className="w-[400px] h-[500px]" />
-        </main>
-        <Footer />
-      </div>
-    );
-  }
-
-  if (error || !outfit) {
+  if (!outfit) {
     return (
       <div className="min-h-screen flex flex-col">
         <Navigation />

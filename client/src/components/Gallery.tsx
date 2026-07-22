@@ -1,15 +1,13 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { useQuery } from "@tanstack/react-query";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Skeleton } from "@/components/ui/skeleton";
-import type { Outfit } from "@shared/schema";
+import { OUTFITS, type StaticOutfit } from "@/data/outfits";
 
 interface OutfitCardProps {
-  outfit: Outfit;
+  outfit: StaticOutfit;
   index: number;
 }
 
@@ -40,7 +38,7 @@ function OutfitCard({ outfit, index }: OutfitCardProps) {
             <div className="relative overflow-hidden aspect-[3/4]">
               <img
                 src={outfit.image}
-                alt={`Model wearing ${outfit.name}`}
+                alt={`Model wearing ${outfit.name} — BizedExclusive luxury menswear`}
                 loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
@@ -71,17 +69,6 @@ function OutfitCard({ outfit, index }: OutfitCardProps) {
 }
 
 export default function Gallery() {
-  const { data: outfits, isLoading } = useQuery<Outfit[]>({
-    queryKey: ["outfits"],
-    queryFn: async () => {
-      const response = await fetch("/api/outfits");
-      if (!response.ok) {
-        throw new Error("Failed to fetch outfits");
-      }
-      return response.json();
-    },
-  });
-
   return (
     <section id="gallery" className="py-24 px-6 bg-card">
       <div className="max-w-7xl mx-auto">
@@ -104,26 +91,13 @@ export default function Gallery() {
           </p>
         </motion.div>
 
-        {isLoading ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-            {Array.from({ length: 8 }).map((_, i) => (
-              <div key={i} className="space-y-4">
-                <Skeleton className="w-full aspect-[3/4] rounded-xl" />
-                <Skeleton className="h-6 w-3/4" />
-                <Skeleton className="h-4 w-full" />
-                <Skeleton className="h-4 w-2/3" />
-                <Skeleton className="h-10 w-full" />
-              </div>
-            ))}
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-            {outfits?.map((outfit, index) => (
-              <OutfitCard key={outfit.id} outfit={outfit} index={index} />
-            ))}
-          </div>
-        )}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          {OUTFITS.map((outfit, index) => (
+            <OutfitCard key={outfit.id} outfit={outfit} index={index} />
+          ))}
+        </div>
       </div>
     </section>
   );
 }
+
